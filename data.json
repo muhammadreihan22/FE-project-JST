@@ -1,0 +1,15 @@
+[
+    {
+      "id": 1,
+      "nama": "Lamborgini",
+      "merek": "pdi",
+      "tahun": 2000,
+      "cc": 1000,
+      "decs" : "bla bla bla",
+      "image": "lambo.png"
+    },
+    {
+      "id":2,
+      "nam"
+    }
+  ]
