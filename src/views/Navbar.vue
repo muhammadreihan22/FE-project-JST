@@ -9,16 +9,16 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" style="color: orangered">Home</a>
+            <a class="nav-link active" aria-current="page" href="#home" style="color: orangered">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" style="color: orangered">About</a>
+            <a class="nav-link" href="#about" style="color: orangered">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" style="color: orangered">Content</a>
+            <a class="nav-link" href="#contact" style="color: orangered">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" style="color: orangered">Contact</a>
+            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true" style="color: orangered; background-color: orangered; color: white; border-radius: 50px; padding: 5px 10px">Admin</a>
           </li>
         </ul>
       </div>
@@ -26,42 +26,56 @@
   </nav>
   <!--End Navbar-->
   <!--Home-->
-  <div class="d-flex align-items-center justify-content-center" style="height: 100vh; background-color: #222831">
-    <div class="row d-flex align-items-center items-centers justify-content-center" style="margin-top: -20px">
-      <div class="col-md-5 d-grid gap-2 mb-3">
-        <h1 class="fw-bold" style="font-size: 3rem; color: orangered">
-          Rekomendasi Mobil <br />
-          Terpercaya
-        </h1>
-        <p style="color: whitesmoke; font-size: 1rem">Jika Anda ingin membeli mobil, belilah sesuai dengan kebutuhan anda dan belilah sesuai dengan kebutuhan anda:)</p>
-        <router-link :to="{ name: 'views.fitur' }" class="btn btn-outline-dark fw-bold" style="color: orangered; padding: 10px; border: 2px solid; margin: 0px 50px">Lihat Rekomendasi</router-link>
-      </div>
-      <div class="col-md-6 mb-3">
-        <div class="img">
-          <img src="../assets/civic.jpg" class="card-img-top" alt="..." style="border-radius: 10px" />
+  <section id="home">
+    <div class="d-flex align-items-center justify-content-center" style="height: 100vh; background-color: #222831">
+      <div class="row d-flex align-items-center items-centers justify-content-center" style="margin-top: -20px">
+        <div class="col-md-5 d-grid gap-2 mb-3">
+          <h1 class="fw-bold" style="font-size: 3rem; color: orangered">
+            Rekomendasi Mobil <br />
+            Terpercaya
+          </h1>
+          <p style="color: whitesmoke; font-size: 1rem">
+            Selamat datang di Rekomendasi Mobil, tempat terbaik untuk menemukan informasi terkini dan terpercaya mengenai dunia otomotif. Kami adalah sumber utama Anda untuk berbagai rekomendasi, ulasan, dan berita seputar mobil di
+            Indonesia.
+          </p>
+          <router-link :to="{ name: 'views.fitur' }" class="btn btn-outline-dark fw-bold" style="color: white; padding: 10px; margin: 0px 70px; background-color: orangered">Lihat Rekomendasi</router-link>
+        </div>
+        <div class="col-md-5 mb-3">
+          <div class="img">
+            <img src="../assets/civic.jpg" class="card-img-top" alt="..." style="border-radius: 10px" />
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
   <!--End Home-->
   <!--About-->
-  <div class="d-flex align-items-center justify-content-center bg-dark" style="height: 100vh">
-    <div class="row d-flex align-items-center items-centers justify-content-center">
-      <div class="col-md-5">
-        <!-- make image dummy ffrom unsplash -->
-        <div class="img">
-          <img src="../assets/civic.jpg" class="card-img-top" alt="..." style="border-radius: 10px; width: 360px; height: 500px" />
+  <section id="about">
+    <div class="d-flex align-items-center justify-content-center bg-dark" style="height: 100vh">
+      <div class="row d-flex align-items-center items-centers justify-content-center">
+        <div class="col-md-5">
+          <!-- make image dummy ffrom unsplash -->
+          <div class="img">
+            <img src="../assets/civic.jpg" class="card-img-top" alt="..." style="border-radius: 10px; width: 360px; height: 500px" />
+          </div>
+        </div>
+        <div class="col-md-5 d-grid gap-1">
+          <h1 class="fw-bold" style="font-size: 2rem; color: orangered">Visi</h1>
+          <p style="color: whitesmoke; font-size: 1rem">
+            Visi kami adalah menjadi portal otomotif terkemuka yang memberikan informasi akurat dan berguna bagi para pecinta mobil di Indonesia. Kami berkomitmen untuk membantu Anda membuat keputusan yang tepat dalam membeli mobil, baik
+            baru maupun bekas.
+          </p>
+          <h1 class="fw-bold" style="font-size: 2rem; color: orangered">Misi</h1>
+          <p style="color: whitesmoke; font-size: 1rem">
+            1. Menyediakan Informasi Lengkap: Kami berusaha menyajikan informasi yang lengkap dan up-to-date mengenai berbagai merek dan model mobil, termasuk spesifikasi, fitur, harga, dan ulasan pengguna.
+          </p>
+          <p style="color: whitesmoke; font-size: 1rem">2. Memberikan Rekomendasi Terbaik: Dengan tim ahli kami, kami memberikan rekomendasi mobil terbaik sesuai dengan kebutuhan dan anggaran Anda.</p>
         </div>
       </div>
-      <div class="col-md-5 d-grid gap-2">
-        <h1 class="fw-bold" style="font-size: 2rem; color: orangered">
-          Rekomendasi Mobil <br />
-          Terpercaya
-        </h1>
-        <p style="color: whitesmoke; font-size: 1rem">Jika Anda ingin membeli mobil, belilah sesuai dengan kebutuhan anda dan belilah sesuai dengan kebutuhan anda:)</p>
-      </div>
     </div>
-  </div>
+  </section>
+
   <!--End About-->
   <!--Contact-->
   <section class="contact" id="contact">
@@ -102,7 +116,7 @@
                     </div>
                   </div>
                   <div class="field">
-                    <input type="text" placeholder="Subject" required="" />
+                    <input type="text" placeholder="Subject" required="" style="width: 500px" />
                   </div>
                   <div class="field textarea">
                     <textarea cols="30" rows="10" placeholder="Message.." required=""></textarea>

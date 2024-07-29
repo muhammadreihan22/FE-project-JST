@@ -1,37 +1,51 @@
 <template>
-  <div>
+  <div class="fitur">
     <!-- Form Nama -->
-    <form @submit.prevent="filterData" v-if="!showResults" class="bg-gray-900 text-white min-h-screen py-8">
-      <div class="w-full max-w-md mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
-        <div class="mb-4">
-          <label for="nama" class="block text-sm font-medium">Nama Anda:</label>
-          <input type="text" require id="nama" v-model="nama" class="mt-1 block w-full border-gray-700 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 bg-gray-700 text-white" />
+    <div class="container">
+      <div class="row">
+        <div class="col-5 mt-10" style="margin-top: 120px; margin-left: 140px">
+          <form @submit.prevent="filterData" v-if="!showResults">
+            <div class="w-full">
+              <h1 style="color: orangered; font-weight: bold">Silahkan isi Fitur</h1>
+              <br />
+              <div class="mb-3">
+                <label for="nama" class="block"></label>
+                <input type="text" require id="nama" v-model="nama" placeholder="Nama Anda" style="width: 250px; height: 35px" />
+              </div>
+              <div class="mb-2">
+                <label for="nama" class="block"></label>
+                <input type="text" require id="email" v-model="Email" placeholder="Email" style="width: 290px; height: 35px" />
+              </div>
+              <div class="mb-2">
+                <label for="merek" class="block" style="color: orangered; display: flex; font-weight: bold">Merek:</label>
+                <select id="merek" v-model="filter.merek" style="width: 120px; height: 35px">
+                  <option value="">Pilih Merek</option>
+                  <option v-for="option in merekOptions" :key="option">{{ option }}</option>
+                </select>
+              </div>
+              <div class="mb-2">
+                <label for="type" class="block" style="color: orangered; display: flex; font-weight: bold">Type:</label>
+                <select id="type" v-model="filter.type" style="width: 120px; height: 35px">
+                  <option value="">Pilih Type</option>
+                  <option v-for="option in typeOptions" :key="option">{{ option }}</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="tahun" class="block" style="color: orangered; display: flex; font-weight: bold">Tahun:</label>
+                <select id="tahun" v-model="filter.tahun" style="width: 220px; height: 35px">
+                  <option value="">Pilih Tahun</option>
+                  <option v-for="option in tahunOptions" :key="option">{{ option }}</option>
+                </select>
+              </div>
+              <button type="submit">Lihat Rekomendasi</button>
+            </div>
+          </form>
         </div>
-        <div class="mb-4">
-          <label for="merek" class="block text-sm font-medium">Merek:</label>
-          <select id="merek" v-model="filter.merek" class="mt-1 block w-full border-gray-700 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 bg-gray-700 text-white">
-            <option value="">Pilih Merek</option>
-            <option v-for="option in merekOptions" :key="option">{{ option }}</option>
-          </select>
+        <div class="col-4" style="margin-top: 150px">
+          <img src="../assets/civic.jpg" alt="" style="height: 450px; width: 430px; border-radius: 5px" />
         </div>
-        <div class="mb-4">
-          <label for="type" class="block text-sm font-medium">Type:</label>
-          <select id="type" v-model="filter.type" class="mt-1 block w-full border-gray-700 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 bg-gray-700 text-white">
-            <option value="">Pilih Type</option>
-            <option v-for="option in typeOptions" :key="option">{{ option }}</option>
-          </select>
-        </div>
-        <div class="mb-4">
-          <label for="tahun" class="block text-sm font-medium">Tahun:</label>
-          <select id="tahun" v-model="filter.tahun" class="mt-1 block w-full border-gray-700 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 bg-gray-700 text-white">
-            <option value="">Pilih Tahun</option>
-            <option v-for="option in tahunOptions" :key="option">{{ option }}</option>
-          </select>
-        </div>
-        <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Filter</button>
       </div>
-    </form>
-
+    </div>
     <!-- Single Card of Filtered Result -->
     <div v-if="showResults" class="text-white bg-gray-900 h-[200vh]">
       <div class="max-w-2xl mx-auto p-4">
@@ -59,6 +73,32 @@
     </div>
   </div>
 </template>
+<style>
+.fitur {
+  background-color: #222831;
+  height: 743px;
+}
+.conotainer {
+  margin-top: 20px;
+}
+.fitur button {
+  padding: 5px 45px;
+  border-radius: 5px;
+  background-color: orangered;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 2px;
+  border: none;
+  border: 2px solid orangered;
+  transition: all 0.3s ease;
+}
+.fitur button:hover {
+  cursor: pointer;
+  background-color: #222831;
+  border: 2px solid orangered;
+  color: orangered;
+}
+</style>
 
 <script>
 import axios from "axios";
